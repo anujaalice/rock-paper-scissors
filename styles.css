@@ -93,7 +93,7 @@ h1:hover {
 .rules-section {
   margin: 20px;
   width: 100hw;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 5px;
   overflow: hidden;
 }
