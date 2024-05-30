@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="play-bold">
+    <h1 class="">ROCK-PAPER-SCISSORS</h1>
+    <p class="toggleMute" onclick="toggleMute()">
+      <img
+        class="sound-on"
+        src="media/mute.png"
+        alt="Sound On"
+        style="display: inline"
+      />
+      <img
+        class="sound-off"
+        src="media/unmute.png"
+        alt="Sound Off"
+        style="display: none"
+      />
+    </p>
+
+    <p id="msg" class="msg"></p>
+
+    <form id="play">
+      <input type="radio" name="choice" value="rock" id="rock" hidden />
+      <input type="radio" name="choice" value="paper" id="paper" hidden />
+      <input type="radio" name="choice" value="scissors" id="scissors" hidden />
+
+      <label for="rock" class="label">
+        <img src="/media/rock.png" alt="Rock" class="choice" id="rock-img" />
+      </label>
+      <label for="paper" class="label">
+        <img src="/media/paper.png" alt="Paper" class="choice" id="paper-img" />
+      </label>
+      <label for="scissors" class="label">
+        <img
+          src="/media/scissors.png"
+          alt="Scissors"
+          class="choice"
+          id="scissors-img"
+        />
+      </label>
+      <br />
+      <label for="rock" class="label" style="padding: 0px 70px">ROCK </label>
+      <label for="paper" class="label" style="padding: 0px 70px">PAPER </label>
+      <label for="scissors" class="label" style="padding: 0px 70px"
+        >SCISSORS
+      </label>
+      <br />
+
+      <button type="submit" onclick="game(event);" class="play-regular">
+        Submit
+      </button>
+      <button type="reset" onclick="location.reload();" class="play-regular">
+        Restart
+      </button>
+    </form>
+
+    <p id="player-choice"></p>
+    <p id="computer-choice"></p>
+
+    <p id="result"></p>
+
+    <div class="points">
+      <div>
+        YOU: <br />
+        <p class="playerPoint" id="playerPoint">0</p>
+      </div>
+      <div>
+        COMPUTER: <br />
+        <p class="computerPoint" id="computerPoint">0</p>
+      </div>
+    </div>
+
+    <audio id="background-music" src="media/bg-audio.mp3" loop autoplay></audio>
+
+    <div class="rules-section">
+      <button class="rules-toggle play-regular" onclick="toggleRules()">
+        Show Rules
+      </button>
+      <div class="rules-content" id="rulesContent">
+        <h2>Rock-Paper-Scissors Rules</h2>
+        <ul>
+          <li>Rock crushes Scissors</li>
+          <li>Scissors cuts Paper</li>
+          <li>Paper covers Rock</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>

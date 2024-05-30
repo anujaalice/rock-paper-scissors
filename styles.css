@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFEA00;
+    text-align: center;
+    overflow-x: hidden;
+
+}
+
+.play-regular {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .play-bold {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+h1 {
+    font-size: 70px; 
+    letter-spacing: 10px; 
+    margin: 10px 0px 0px 0px;
+} 
+
+h1:hover {
+    transform: scale(1.1);
+}
+
+
+  .msg {
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .choice {
+    width: 130px;
+    padding: 10px 30px;
+
+  }
+
+  label:hover img {
+    transform: scale(1.2); /* Scale up the image on hover */
+}
+
+  button {
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bolder;
+    font-size: 18px;
+    box-shadow: 2px 2px 2px 2px black;
+    background-color: lightgray;
+    cursor: pointer;
+
+  }
+
+  .toggleMute img {
+    width: 20px;
+  }
+
+  /* Additional */
+
+  @keyframes flicker {
+    0% {
+        transform: scale(0.9); /* Initial font size */
+    }
+    50% {
+        transform: scale(1.0); /* Zoom in font size */
+    }
+    100% {
+        transform: scale(0.9); /* Back to initial font size */
+    }
+}
+
+.flickering-text {
+    animation: flicker 0.4s infinite; /* Apply flicker animation */
+}
+
+.points {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+
+
+.rules-section {
+  margin: 20px;
+  width: 100hw;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.rules-toggle {
+  width: 100hw;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+}
+
+.rules-toggle:hover {
+  background-color: #ddd;
+}
+
+.rules-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 10px;
+}
+
+.rules-content h2 {
+  margin: 10px 0;
+}
+
+.rules-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rules-content ul li {
+  padding: 5px 0;
+  border: none;
+}
+
+.rules-content ul li:last-child {
+  border-bottom: none;
+}
